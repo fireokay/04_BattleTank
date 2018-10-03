@@ -7,7 +7,6 @@
 #include "GameFramework/Actor.h"
 #include "TankPlayerController.generated.h" // Must be the last include
 
-class ATank;
 
 /**
  * Responsible for helping the player aim.
@@ -18,8 +17,6 @@ class BATTLETANK_API ATankPlayerController : public APlayerController
 	GENERATED_BODY()
 	
 protected:
-	UFUNCTION(BlueprintCallable, Category = "Setup")
-	ATank* GetControlledTank() const; // Pointer to tank
 
 	UFUNCTION(BlueprintImplementableEvent, Category = "Setup")
 	void FoundAimingComponent(UTankAimingComponent* AimingCompRef);
