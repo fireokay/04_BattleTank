@@ -59,6 +59,7 @@ bool ATankPlayerController::GetLookVectorHitLocation(FVector LookDirection, FVec
 	if (GetWorld()->LineTraceSingleByChannel(HitResult, StartLocation, EndLocation, ECollisionChannel::ECC_Visibility))
 	{
 		OutHitLocation = HitResult.Location;
+		UE_LOG(LogTemp, Warning, TEXT("OutHitLocation: %s"), *OutHitLocation.ToString())
 		return true;
 	}
 	// UE_LOG(LogTemp, Warning, TEXT("Look direction"));
